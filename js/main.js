@@ -26,6 +26,15 @@ rec.continuous = true;
 rec.maxAlternatives = 1;
 //rec.start(); //มันจะฟังเสียงบอทพูด ฟังครั้งแรก ต่อไปต้องกด
 
+function test(usermsg) {
+    let output = '';
+    output += `<div class="chatarea-inner user" runat="server">${usermsg}</div>`;
+    document.getElementById('txtK').text = usermsg;
+    alert(document.getElementById('txtK').text);
+    chatareaouter.innerHTML += output;
+    return chatareaouter;
+}
+
 function showusermsg(usermsg){
     let output = '';
     output += `<div class="chatarea-inner user" runat="server">${usermsg}</div>`;
